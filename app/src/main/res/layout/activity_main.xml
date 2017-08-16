@@ -1,18 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background"
     tools:context="com.example.heyukun.seachphone.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="手机号码归属地查询"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:textColor="#fff"
+         />
+
+    <EditText
+        android:id="@+id/input_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="请输入手机号码"
+        android:inputType="number"
+        android:textColorHint="@color/hint_color"
+        />
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#fff"
+        android:text="查询"
+        android:textSize="20sp"
+        android:background="@color/button_background_color"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="20dp"
+        android:textColor="@color/title_txt_color"
+        android:text="查询结果："
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="40dp"
+        android:background="#fff">
+         <TextView
+             android:id="@+id/tv_phone"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingTop="16dp"
+             android:text="手机号：xxx"
+             android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tv_province"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="省份：xxx"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="运营商：xxx"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tv_carrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="归属运营商：xxx"
+            android:textSize="18sp"/>
 
-</android.support.constraint.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
