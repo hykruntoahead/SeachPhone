@@ -44,7 +44,7 @@ public class MainPresenterImpl extends BasePresenter{
             public void onSuccess(String responseResultStr) {
              int index = responseResultStr.indexOf("{");
                 String json = responseResultStr.substring(index,responseResultStr.length());
-                mainView.updateView(parseModelwithJsonStr(json));
+                mainView.updateView(parseModelWithJsonStr(json));
                 mainView.hideLoading();
             }
 
@@ -57,7 +57,7 @@ public class MainPresenterImpl extends BasePresenter{
         httpUtil.sendGetHttp(Constant.BASE_URL,map);
     }
 
-    private PhoneModel parseModelwithJsonStr(String json){
+    private PhoneModel parseModelWithJsonStr(String json){
         PhoneModel phoneModel = new PhoneModel();
 
         try {
