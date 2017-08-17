@@ -6,5 +6,5 @@ package com.example.heyukun.seachphone.view;
 
 public interface IBaseView {
     void showLoading();
-    void hidenLoading();
+    void hideLoading();
 }
